@@ -1,3 +1,0 @@
-# nextjs
-# nextjs
-# nextjs
