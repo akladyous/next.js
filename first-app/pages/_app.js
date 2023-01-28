@@ -21,3 +21,6 @@ export default function App({ Component, pageProps }) {
     </Layout>
   );
 }
+// Home.getLayout = function getLayout(page) {
+//   return <NestedLayout>{page}</NestedLayout>;
+// };
