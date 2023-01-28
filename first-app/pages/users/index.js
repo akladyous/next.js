@@ -6,7 +6,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function home({ users }) {
+export default function usersHome({ users }) {
   return (
     <div>
       {users.map((user) => {
