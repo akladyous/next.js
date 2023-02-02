@@ -1,4 +1,5 @@
-export async function getStaticProps() {
+export async function getStaticProps(params) {
+  console.log("usersHome getStaticProps params : ", params);
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
   const data = await response.json();
   return {
@@ -6,7 +7,10 @@ export async function getStaticProps() {
   };
 }
 
+// import info from "@/data/info.json";
 export default function usersHome({ users }) {
+  // console.log("users : ", users);
+
   return (
     <div>
       {users.map((user) => {
