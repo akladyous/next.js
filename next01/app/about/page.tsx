@@ -11,6 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default function About() {
+  throw new Error('Not today!!!!');
+
   return (
     <div className=' styles.main'>
       <h3 className={`${roboto.className} mb-3 text-2xl `}>
