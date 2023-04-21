@@ -12,7 +12,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body className='[&>*:not(:first-child)]:mx-2'>
+        <nav className='h-10 mb-4 p-2 bg-slate-100 mx-0'>
+          <h1>My Navbar</h1>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }

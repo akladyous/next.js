@@ -13,5 +13,21 @@ export default async function UsersPage() {
   const usersData: Promise<User[]> = getAllUsers();
   const users = await usersData;
 
-  return <div>page</div>;
+  const content = (
+    <section>
+      <h2>
+        <Link href='/'>home</Link>
+      </h2>
+      <br />
+      {users.map((user) => {
+        return (
+          <>
+            <Link href={`/users/${user.id}`}>{user.name}</Link>
+          </>
+        );
+      })}
+    </section>
+  );
+
+  return content;
 }
