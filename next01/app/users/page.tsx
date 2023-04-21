@@ -22,7 +22,9 @@ export default async function UsersPage() {
       {users.map((user) => {
         return (
           <>
-            <Link href={`/users/${user.id}`}>{user.name}</Link>
+            <p key={user.id}>
+              <Link href={`/users/${user.id}`}>{user.name}</Link>
+            </p>
           </>
         );
       })}
