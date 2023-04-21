@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: 'about page',
   description: 'Welcome to about page',
 };
+
 export default function About() {
   return (
     <div className=' styles.main'>
