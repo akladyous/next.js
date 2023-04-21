@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function About() {
-  throw new Error('Not today!!!!');
+  // throw new Error('Not today!!!!');
 
   return (
     <div className=' styles.main'>
