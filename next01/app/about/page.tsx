@@ -1,9 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
 import { Inter, Roboto } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const roboto = Roboto({ weight: '500', subsets: ['greek', 'cyrillic'] });
 
+export const metadata: Metadata = {
+  title: 'about page',
+  description: 'Welcome to about page',
+};
 export default function About() {
   return (
     <div className=' styles.main'>
