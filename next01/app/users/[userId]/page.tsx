@@ -6,9 +6,9 @@ type Params = {
 };
 
 export default async function UserPage({ params: { userId } }: Params) {
-  const user: Promise<User> = await getUser(userId);
+  const user: Promise<User> = getUser(userId);
   const userData = await user;
-  debugger;
+
   return (
     <div>
       <h3>User Info</h3>

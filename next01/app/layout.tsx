@@ -13,12 +13,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className='[&>*:not(:first-child)]:mx-2'>
+      <body className='[&>*:not(:first-child)]:mx-2 h-screen'>
         <nav className='h-10 mb-4 p-2 bg-slate-100 mx-0 text-black'>
           <h1>My Navbar</h1>
         </nav>
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

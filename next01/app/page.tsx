@@ -9,12 +9,17 @@ export default async function Home() {
   );
   const data = await res.json();
   return (
-    <main className='min-h-screen'>
-      <h2>home page</h2>
-      <p>{data.datetime}</p>
-      <p>
-        <Link href='users'>Users</Link>
-      </p>
+    <main className=''>
+      {/* <p>{data.datetime}</p> */}
+
+      <div className='my-2 py-2 border'>
+        <Link
+          className='bg-blue-200 p-2'
+          href='users'
+        >
+          Users List
+        </Link>
+      </div>
     </main>
   );
 }

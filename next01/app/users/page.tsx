@@ -19,9 +19,14 @@ export default async function UsersPage(params: Params) {
 
   const content = (
     <section>
-      <h2>
-        <Link href='/'>home</Link>
-      </h2>
+      <div className='my-2 py-2 border'>
+        <Link
+          href='/'
+          className='bg-blue-200 p-2'
+        >
+          home page
+        </Link>
+      </div>
       <br />
       {users.map((user) => {
         return (
