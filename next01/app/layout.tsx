@@ -1,3 +1,4 @@
+import Header from '@/ui/header';
 import './globals.css';
 import Footer from '@/ui/footer';
 
@@ -13,11 +14,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className='[&>*:not(:first-child)]:mx-2 h-screen'>
-        <nav className='h-10 mb-4 p-2 bg-slate-100 mx-0 text-black'>
+      {/* '[&>*:not(:first-child)]:mx-2 h-screen' */}
+      <body className=''>
+        {/* <nav className='h-10 mb-4 p-2 bg-slate-100 mx-0 text-black'>
           <h1>My Navbar</h1>
-        </nav>
-        {children}
+        </nav> */}
+        <Header />
+        <main className='p-3'>{children}</main>
         {/* <Footer /> */}
       </body>
     </html>
