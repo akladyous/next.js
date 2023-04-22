@@ -1,12 +1,6 @@
 'use client';
 
-export default function Footer({
-  reactVersion,
-  nextVersion,
-}: {
-  reactVersion: string;
-  nextVersion: string;
-}) {
+export default function Footer() {
   return (
     <div className='col-start-2 col-end-4 mt-28 flex items-center justify-between'>
       <style jsx>
@@ -36,10 +30,7 @@ export default function Footer({
         </svg>
       </span>
 
-      <div className='flex gap-x-6 text-sm text-gray-600'>
-        <div>React: {reactVersion}</div>
-        <div>Next: {nextVersion}</div>
-      </div>
+      <div className='flex gap-x-6 text-sm text-gray-600'></div>
     </div>
   );
 }

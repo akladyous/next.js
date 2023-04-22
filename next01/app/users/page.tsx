@@ -14,7 +14,6 @@ type Params = {
 };
 
 export default async function UsersPage(params: Params) {
-  debugger;
   const usersData: Promise<User[]> = getAllUsers();
   const users = await usersData;
 
@@ -28,7 +27,12 @@ export default async function UsersPage(params: Params) {
         return (
           <>
             <p key={user.id}>
-              <Link href={`/users/${user.id}`}>{user.name}</Link>
+              <Link
+                className=' hover:text-red-300'
+                href={`/users/${user.id}`}
+              >
+                {user.name}
+              </Link>
             </p>
           </>
         );

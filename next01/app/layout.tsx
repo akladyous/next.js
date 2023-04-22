@@ -18,10 +18,7 @@ export default function RootLayout({
           <h1>My Navbar</h1>
         </nav>
         {children}
-        <Footer
-          reactVersion='18'
-          nextVersion='13.3'
-        />
+        <Footer />
       </body>
     </html>
   );
