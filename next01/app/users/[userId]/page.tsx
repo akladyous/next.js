@@ -2,11 +2,25 @@ import getUser from '@/lib/getUser';
 import getUserPosts from '@/lib/getUserPosts';
 import { Suspense } from 'react';
 import UserPosts from './components/UserPosts';
+import { isFunctionDeclaration } from 'typescript';
+import { Metadata } from 'next';
+
 type Params = {
   params: {
     userId: string;
   };
 };
+
+export async function generateMetadata({
+  params: { userId },
+}: Params): Promise<Metadata> {
+  const userData: Promise<User> = getUser(userId);
+  const user = await userData;
+  return {
+    title: user.name,
+    description: 'User Page for ${user.name}',
+  };
+}
 
 export default async function UserPage({ params: { userId } }: Params) {
   const userDataPromise: Promise<User> = getUser(userId);
