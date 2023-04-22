@@ -12,9 +12,9 @@ export default async function UserPage({ params: { userId } }: Params) {
   return (
     <div>
       <h3>User Info</h3>
-      <ul>
-        <p>{JSON.stringify(userData, null, 2)}</p>
-      </ul>
+      <div>
+        <pre>{JSON.stringify(userData, null, 2)}</pre>
+      </div>
     </div>
   );
 }
