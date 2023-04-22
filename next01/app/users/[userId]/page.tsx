@@ -10,9 +10,9 @@ type Params = {
 
 export default async function UserPage({ params: { userId } }: Params) {
   const userDataPromise: Promise<User> = getUser(userId);
-  const userPostsData: Promise<Post[]> = getUserPosts(userId);
+  const userPostsDataPromise: Promise<Post[]> = getUserPosts(userId);
 
-  // const [user, userPosts] = await Promise.all([userDataPromise, userPostsData]);
+  // const [user, userPosts] = await Promise.all([userDataPromise, userPostsDataPromise]);
   const user = await userDataPromise;
 
   return (
@@ -23,7 +23,7 @@ export default async function UserPage({ params: { userId } }: Params) {
       <div>
         <Suspense fallback={<h3>Loading...</h3>}>
           {/* @ts-expect-error Async Server Component */}
-          <UserPosts promise={userPostsData} />
+          <UserPosts promise={userPostsDataPromise} />
         </Suspense>
       </div>
     </div>
