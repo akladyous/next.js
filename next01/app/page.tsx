@@ -11,6 +11,7 @@ export default async function Home() {
   return (
     <main className='min-h-screen'>
       <h2>home page</h2>
+      <p>{data.datetime}</p>
       <p>
         <Link href='users'>Users</Link>
       </p>

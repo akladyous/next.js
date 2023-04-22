@@ -8,8 +8,13 @@ export const metadata: Metadata = {
   title: 'users page',
   description: 'welcome to users page',
 };
+type Params = {
+  params: {};
+  searchParams: {};
+};
 
-export default async function UsersPage() {
+export default async function UsersPage(params: Params) {
+  debugger;
   const usersData: Promise<User[]> = getAllUsers();
   const users = await usersData;
 
