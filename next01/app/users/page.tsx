@@ -33,7 +33,7 @@ export default async function UsersPage(params: Params) {
           <>
             <p key={user.id}>
               <Link
-                className=' hover:text-red-300'
+                className='hover:text-red-300'
                 href={`/users/${user.id}`}
               >
                 {user.name}

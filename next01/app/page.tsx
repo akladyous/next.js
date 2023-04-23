@@ -13,7 +13,7 @@ export default async function Home() {
     <main className=''>
       {/* <p>{data.datetime}</p> */}
 
-      <div className='my-2 py-2 border'>
+      <div className='my-2 py-2 border h-screen'>
         <Link
           className='bg-blue-200 p-2'
           href='users'
