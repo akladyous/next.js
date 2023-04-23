@@ -1,13 +1,14 @@
 'use client';
 
-import Link from 'next/link';
+import Link, { LinkProps } from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
 
-type NavLinkProps = {
+// React.AllHTMLAttributes<HTMLAnchorElement>
+interface NavLinkProps extends LinkProps {
   children?: React.ReactNode;
   href: string;
   classes?: string;
-};
+}
 
 export default function NavLink({ href, children, classes }: NavLinkProps) {
   const segment = useSelectedLayoutSegment();
