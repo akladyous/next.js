@@ -7,18 +7,13 @@ export default function NavBar() {
       <nav className=' space-x-4'>
         <NavLink
           href='/'
-          classes='hover:bg-slate-300 p-2'
+          className='hover:bg-slate-300 p-2'
         >
           Home
         </NavLink>
-        {/* <Link
-          className='hover:bg-slate-300 p-2 '
-          href='/'
-        >
-          Home
-        </Link> */}
+
         <NavLink
-          classes='hover:bg-slate-300 p-2 '
+          className='hover:bg-slate-300 p-2 '
           href='/users'
         >
           Users

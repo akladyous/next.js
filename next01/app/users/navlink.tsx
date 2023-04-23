@@ -1,18 +1,22 @@
 'use client';
 
 import Link, { LinkProps } from 'next/link';
+
 import { useSelectedLayoutSegment } from 'next/navigation';
 
 // React.AllHTMLAttributes<HTMLAnchorElement>
 interface NavLinkProps extends LinkProps {
   children?: React.ReactNode;
   href: string;
-  classes?: string;
+  className?: string;
+}
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(' ');
 }
 
-export default function NavLink({ href, children, classes }: NavLinkProps) {
+export default function NavLink({ href, children, className }: NavLinkProps) {
   const segment = useSelectedLayoutSegment();
-
+  let isActive = href === `/${segment}`;
   console.log('NavLink -> href:     ', href);
   console.log('NavLink -> segment:  ', segment);
   console.log('NavLink -> children: ', children);
@@ -21,7 +25,7 @@ export default function NavLink({ href, children, classes }: NavLinkProps) {
   return (
     <>
       <Link
-        {...(classes ? { className: classes } : {})}
+        {...(className && { className })}
         href={href}
       >
         {children}
