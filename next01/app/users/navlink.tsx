@@ -39,7 +39,7 @@ export default function NavLink({ href, children, className }: NavLinkProps) {
       <Link
         // {...(className && { className })}
         className={classNames(
-          active ? 'bg-gray-100 text-gray-900' : '',
+          active ? 'bg-gray-100 underline' : '',
           'text-gray-900  hover:bg-blue-400 p-2 rouned-lg',
         )}
         href={href}
