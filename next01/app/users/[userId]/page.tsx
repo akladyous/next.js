@@ -1,11 +1,11 @@
 import getUser from '@/lib/getUser';
 import getUserPosts from '@/lib/getUserPosts';
-import { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import UserPosts from './components/UserPosts';
-import { isFunctionDeclaration } from 'typescript';
 import { Metadata } from 'next';
 
 type Params = {
+  children?: React.ReactNode;
   params: {
     userId: string;
   };
