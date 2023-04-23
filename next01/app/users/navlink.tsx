@@ -32,7 +32,7 @@ export default function NavLink({ href, children, className }: NavLinkProps) {
   useEffect(() => {
     console.log('searchParams : ', searchParams);
     console.log('pathname     : ', pathname);
-  }, []);
+  }, [searchParams, pathname]);
 
   return (
     <>
