@@ -1,5 +1,5 @@
-import Header from '@/ui/header';
 import './globals.css';
+import NavBar from '@/ui/navbar';
 import Footer from '@/ui/footer';
 
 export const metadata = {
@@ -15,13 +15,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       {/* '[&>*:not(:first-child)]:mx-2 h-screen' */}
-      <body className=''>
-        {/* <nav className='h-10 mb-4 p-2 bg-slate-100 mx-0 text-black'>
-          <h1>My Navbar</h1>
-        </nav> */}
-        <Header />
+      <body>
+        <NavBar />
         <main className='p-3'>{children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

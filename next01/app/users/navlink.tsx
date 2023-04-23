@@ -1,13 +1,30 @@
 'use client';
 
 import Link from 'next/link';
+import { useSelectedLayoutSegment } from 'next/navigation';
 
-type NavLinkParams = {
+type NavLinkProps = {
   children?: React.ReactNode;
   href: string;
+  classes?: string;
 };
 
-export default async function NavLink({ href, children }: NavLinkParams) {
-  console.log('NavLink -> href: ', href);
-  return <Link href={href}>{children}</Link>;
+export default function NavLink({ href, children, classes }: NavLinkProps) {
+  const segment = useSelectedLayoutSegment();
+
+  console.log('NavLink -> href:     ', href);
+  console.log('NavLink -> segment:  ', segment);
+  console.log('NavLink -> children: ', children);
+  console.log('-'.repeat(50));
+
+  return (
+    <>
+      <Link
+        {...(classes ? { className: classes } : {})}
+        href={href}
+      >
+        {children}
+      </Link>
+    </>
+  );
 }
