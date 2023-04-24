@@ -31,6 +31,7 @@ async function getMethod(req: NextRequest, res: ?NextResponse) {
 export async function GET(req: NextRequest, res: NextResponse) {
   const { searchParams } = new URL(req.url);
   const name = searchParams.get('name');
+  const id: string = req.url.slice(req.url.lastIndexOf('/') + 1);
 
   return NextResponse.json({ message: 'hello', name: name }, { status: 200 });
 }
