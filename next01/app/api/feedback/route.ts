@@ -1,5 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
+import { INTERNALS } from 'next/dist/server/web/spec-extension/request';
 import { NextRequest, NextResponse } from 'next/server';
 
 type Feedback = {
@@ -12,23 +11,23 @@ type Feedback = {
 };
 type ResponseData = {
   message: string;
+  currentDate: Date;
+  ip?: string;
 };
 
-export async function GET(req: Request, res: NextApiResponse) {
+export async function GET(req: NextRequest, res: NextResponse) {
   debugger;
-  const data: ResponseData = { message: 'mi sono rotto il cazzo' };
+
+  const data: ResponseData = {
+    message: 'hellow fron nextJS',
+    currentDate: new Date(),
+  };
   const blob = new Blob([JSON.stringify(data, null, 2)], {
     type: 'application/json',
   });
+  const init = { status: 200, statusText: 'okay' };
+  const response1 = new Response(blob, init);
 
-  const init = { status: 200, statusText: 'prova' };
-  const response = new Response(blob, init);
-
-  return response;
+  // return new NextResponse(blob, init);
+  return NextResponse.json({ message: 'hello' }, { status: 200 });
 }
-
-// export async function POST(request: NextRequest) {
-//   const data = await request.json();
-
-//   return NextResponse
-// }
