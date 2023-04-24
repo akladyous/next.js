@@ -26,12 +26,13 @@ async function getMethod(req: NextRequest, res: ?NextResponse) {
   const init = { status: 200, statusText: 'okay' };
   const response1 = new Response(blob, init);
   return new NextResponse(blob, init);
+
+  const id: string = req.url.slice(req.url.lastIndexOf('/') + 1);
 }
 
 export async function GET(req: NextRequest, res: NextResponse) {
   const { searchParams } = new URL(req.url);
   const name = searchParams.get('name');
-  const id: string = req.url.slice(req.url.lastIndexOf('/') + 1);
 
   return NextResponse.json({ message: 'hello', name: name }, { status: 200 });
 }
