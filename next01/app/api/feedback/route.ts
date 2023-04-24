@@ -1,3 +1,4 @@
+import { NextURL } from 'next/dist/server/web/next-url';
 import { INTERNALS } from 'next/dist/server/web/spec-extension/request';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -16,7 +17,8 @@ type ResponseData = {
 };
 
 export async function GET(req: NextRequest, res: NextResponse) {
-  debugger;
+  const { searchParams } = new URL(req.url);
+  const name = searchParams.get('name');
 
   const data: ResponseData = {
     message: 'hellow fron nextJS',
@@ -27,7 +29,6 @@ export async function GET(req: NextRequest, res: NextResponse) {
   });
   const init = { status: 200, statusText: 'okay' };
   const response1 = new Response(blob, init);
-
   // return new NextResponse(blob, init);
-  return NextResponse.json({ message: 'hello' }, { status: 200 });
+  return NextResponse.json({ message: 'hello', name: name }, { status: 200 });
 }
