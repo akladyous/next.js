@@ -15,7 +15,7 @@ type ResponseData = {
   currentDate: Date;
   ip?: string;
 };
-async function getMethod(req: NextRequest, res: ?NextResponse) {
+async function getMethod(req: NextRequest, res: NextResponse) {
   const data: ResponseData = {
     message: 'hellow fron nextJS',
     currentDate: new Date(),
@@ -25,14 +25,21 @@ async function getMethod(req: NextRequest, res: ?NextResponse) {
   });
   const init = { status: 200, statusText: 'okay' };
   const response1 = new Response(blob, init);
-  return new NextResponse(blob, init);
 
   const id: string = req.url.slice(req.url.lastIndexOf('/') + 1);
+  return new NextResponse(blob, init);
 }
-
-export async function GET(req: NextRequest, res: NextResponse) {
+type Props = {
+  params: {
+    slug?: string;
+    id?: string;
+  };
+};
+export async function GET(req: NextRequest, { params }: Props) {
   const { searchParams } = new URL(req.url);
   const name = searchParams.get('name');
-
+  if (params.id) {
+    console.log('id : ', params.id);
+  }
   return NextResponse.json({ message: 'hello', name: name }, { status: 200 });
 }
