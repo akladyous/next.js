@@ -2,10 +2,16 @@ import { Roboto } from 'next/font/google';
 import type { Metadata } from 'next';
 import { Robots } from 'next/dist/lib/metadata/types/metadata-types';
 
-export const metadata: Metadata = {
-  title: 'About Page',
-  description: 'Welcome to About Page',
-};
+// export const metadata: Metadata = {
+//   title: 'About Page',
+//   description: 'Welcome to About Page',
+// };
+
+export async function generateMetadata(params: {}) {
+  debugger;
+  return { ...params, title: '-= About Page =-' };
+}
+
 const roboto = Roboto({
   subsets: ['latin'],
   display: 'block',
