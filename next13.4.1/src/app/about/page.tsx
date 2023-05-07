@@ -8,8 +8,11 @@ import { Robots } from 'next/dist/lib/metadata/types/metadata-types';
 // };
 
 export async function generateMetadata(params: {}) {
-  debugger;
-  return { ...params, title: '-= About Page =-' };
+  return {
+    ...params,
+    title: 'About Page',
+    description: 'Welcome to About Page',
+  };
 }
 
 const roboto = Roboto({
