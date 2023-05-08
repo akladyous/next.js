@@ -23,8 +23,6 @@ const roboto = Roboto({
 });
 
 export default function AboutPage() {
-  throw new Error('custom error invoked');
-
   return (
     <main className=''>
       <h3 className={`${roboto.className} mb-3 text-2xl `}>About Page</h3>
