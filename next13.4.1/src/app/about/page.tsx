@@ -22,8 +22,9 @@ const roboto = Roboto({
   weight: '400',
 });
 
-export default function AboutPage() {
+export default function AboutPage(props: {}) {
   // throw new Error('custom error invoked');
+  console.log('AboutPage props : ', props);
   return (
     <main className=''>
       <h3 className={`${roboto.className} mb-3 text-2xl `}>About Page</h3>
