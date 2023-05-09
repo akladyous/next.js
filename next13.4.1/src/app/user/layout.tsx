@@ -16,7 +16,7 @@ export async function generateMetadata(props: {}): Promise<Metadata> {
   return { title: 'user' };
 }
 
-export default function UserLayout(props: UserProps) {
+export default function UserHomeLayout(props: UserProps) {
   console.log('\x1b[36m%s%s\x1b[0m', 'UserLayout props : '.padEnd(30), props);
 
   return (
