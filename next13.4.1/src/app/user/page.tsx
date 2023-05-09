@@ -1,6 +1,6 @@
 type Props = { params: {}; searchParams: {} };
 
-export default function UserHome(props: Props) {
+export default function UserPage(props: Props) {
   console.log('User home props : ', props);
   return (
     <>
@@ -9,4 +9,4 @@ export default function UserHome(props: Props) {
   );
 }
 
-export async function generateStaticParams() {}
+// export async function generateStaticParams() {}
