@@ -17,7 +17,10 @@ export default function RootLayout(props: Props) {
   console.log('RootLayout props : ', props);
   return (
     <html lang='en'>
-      <body className={inter.className}>{props.children}</body>
+      <body className={`${inter.className}  border-green-500 border-2 m-1`}>
+        <h4 className='px-2'>Root Layout</h4>
+        {props.children}
+      </body>
     </html>
   );
 }
