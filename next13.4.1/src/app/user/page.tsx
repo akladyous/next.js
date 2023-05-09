@@ -1,5 +1,4 @@
 'use client';
-
 import { useSelectedLayoutSegments } from 'next/navigation';
 
 type Props = { params: {}; searchParams: {} };
@@ -7,8 +6,8 @@ type Segments = string[] | null;
 
 export default function UserPage(props: Props) {
   console.log('\x1b[36m%s%s\x1b[0m', 'User home props : ', props);
-  const segments: Segments = useSelectedLayoutSegments();
 
+  const segments: Segments = useSelectedLayoutSegments();
   console.log('\x1b[36m%s%s\x1b[0m', 'user component segments : ', segments);
   return (
     <>
