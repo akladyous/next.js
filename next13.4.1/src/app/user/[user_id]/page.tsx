@@ -1,5 +1,6 @@
 'use client';
 import { useSelectedLayoutSegment } from 'next/navigation';
+import { Navigation } from './navigation';
 
 type Segments = string | null;
 
@@ -26,6 +27,8 @@ export default function User(props: Props) {
       <section>
         <h4>User account</h4>
         <p>current user id {props.params.user_id}</p>
+
+        {/* <Navigation /> */}
       </section>
     </>
   );
