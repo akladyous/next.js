@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { useSelectedLayoutSegments } from 'next/navigation';
 
 type Props = { params: {}; searchParams: {} };
@@ -21,6 +22,20 @@ export default function UserPage(props: Props) {
             ? segments.map((segment, index) => <li key={index}>{segment}</li>)
             : null}
         </ul>
+        <div>
+          <Link
+            className='bg-slate-200 mr-2 p-1'
+            href={'/user/1'}
+          >
+            user 1
+          </Link>
+          <Link
+            className='bg-slate-200 mr-2 p-1'
+            href={'/user/2'}
+          >
+            user 2
+          </Link>
+        </div>
       </section>
     </>
   );

@@ -12,12 +12,13 @@ async function getProduct(id: string) {
 
 export async function generateMetadata(props: {}): Promise<Metadata> {
   // const product = await getProduct(params.id);
-  console.log('user generateMetadata props : ', props);
+  console.log('\x1b[36m%s%s\x1b[0m', 'UserLayout props : '.padEnd(30), props);
   return { title: 'user' };
 }
 
 export default function UserLayout(props: UserProps) {
-  console.log('UserLayout props : ', props);
+  console.log('\x1b[36m%s%s\x1b[0m', 'UserLayout props : '.padEnd(30), props);
+
   return (
     <main
       id='userLayout'
