@@ -16,6 +16,7 @@ export async function generateMetadata(props: {}): Promise<Metadata> {
 }
 
 export default function UserLayout(props: UserProps) {
+  console.log('UserLayout props : ', props);
   return (
     <section className='border m-1 p-2 min-h-screen'>{props.children}</section>
   );
