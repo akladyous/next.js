@@ -6,7 +6,7 @@ export default function UserPage(props: Props) {
     <>
       <section
         id='userPage'
-        className='border m-1 p-2 min-h-screen'
+        className='border-2 border-blue-500 m-1 p-2 min-h-screen'
       >
         <h1>Users home page</h1>
       </section>

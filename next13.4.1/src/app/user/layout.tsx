@@ -23,6 +23,7 @@ export default function UserLayout(props: UserProps) {
       id='userLayout'
       className='border-2 border-red-500 m-3 p-2 min-h-screen'
     >
+      <h4 className='px-2'>User Layout</h4>
       {props.children}
     </main>
   );
