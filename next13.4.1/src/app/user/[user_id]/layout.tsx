@@ -1,4 +1,5 @@
 import ActiveUser from './activeUser';
+
 type ActiveUserLayoutProps = {
   children: React.ReactNode;
   params: { user_id: string };

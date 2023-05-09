@@ -1,12 +1,26 @@
 type Props = {
   params: { user_id: string };
-  searchParams: {};
+  searchParams: { [key: string]: string | string[] | undefined };
 };
+
+export async function generateMetadata(props: Props) {
+  console.log(
+    '\x1b[36m%s%s\x1b[0m',
+    'ActiveUserPage generateMetadata params : '.padEnd(50),
+    props.params,
+  );
+  console.log(
+    '\x1b[36m%s%s\x1b[0m',
+    'ActiveUserPage generateMetadata searchParams : '.padEnd(50),
+    props.searchParams,
+  );
+  return { ...props, title: `user ${props.params.user_id}` };
+}
 
 export default function ActiveUserPage(props: Props) {
   console.log(
     '\x1b[36m%s%s\x1b[0m',
-    'ActiveUser page: props'.padEnd(30),
+    'ActiveUserPage: params'.padEnd(50),
     props,
   );
 
