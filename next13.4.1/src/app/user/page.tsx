@@ -1,15 +1,14 @@
-'use client';
 import Link from 'next/link';
-import { useSelectedLayoutSegments } from 'next/navigation';
+import ActiveUser from './components/activeUser';
 
-type Props = { params: {}; searchParams: {} };
-type Segments = string[] | null;
+type Props = {
+  params: {};
+  searchParams: { [key: string]: string | string[] | undefined };
+};
 
 export default function UserPage(props: Props) {
-  console.log('\x1b[36m%s%s\x1b[0m', 'User home props : ', props);
+  console.log('\x1b[36m%s%s\x1b[0m', 'UserPage props : '.padEnd(50), props);
 
-  const segments: Segments = useSelectedLayoutSegments();
-  console.log('\x1b[36m%s%s\x1b[0m', 'user component segments : ', segments);
   return (
     <>
       <section
@@ -17,11 +16,7 @@ export default function UserPage(props: Props) {
         className='border-2 border-blue-500 m-1 p-2 min-h-screen'
       >
         <h1>Users home page</h1>
-        <ul>
-          {segments
-            ? segments.map((segment, index) => <li key={index}>{segment}</li>)
-            : null}
-        </ul>
+
         <div>
           <Link
             className='bg-slate-200 mr-2 p-1'
@@ -36,6 +31,7 @@ export default function UserPage(props: Props) {
             user 2
           </Link>
         </div>
+        <ActiveUser />
       </section>
     </>
   );
