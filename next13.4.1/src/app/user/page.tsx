@@ -8,3 +8,5 @@ export default function UserHome(props: Props) {
     </>
   );
 }
+
+export async function generateStaticParams() {}
