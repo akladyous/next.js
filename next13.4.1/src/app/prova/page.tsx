@@ -1,11 +1,15 @@
 'use client';
 import { useSelectedLayoutSegments } from 'next/navigation';
 import { useEffect } from 'react';
+type Props = {
+  params: { user_id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
 
-export default function Prova() {
+export default function Prova(props: Props) {
   const segments = useSelectedLayoutSegments();
   console.log('Prova -> segments : ', segments);
-
+  console.log('\x1b[36m%s%s\x1b[0m', 'User: params'.padEnd(50), props);
   useEffect(() => {
     console.log('Prova[useEffect] -> segments : ', segments);
   }, [segments]);

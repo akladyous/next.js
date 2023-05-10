@@ -1,9 +1,21 @@
 'use client';
-import { useSelectedLayoutSegments } from 'next/navigation';
+import {
+  useSelectedLayoutSegment,
+  useSelectedLayoutSegments,
+} from 'next/navigation';
+type Props = {
+  params: { user_id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
 
-export default function One() {
+export default function One(props: Props) {
   const segments = useSelectedLayoutSegments();
+  const segment = useSelectedLayoutSegment();
   console.log('One -> segments : ', segments);
+  console.log('One -> segment : ', segment);
+
+  console.log('One -> params'.padEnd(50), props);
+
   return (
     <section
       id='userPage'
