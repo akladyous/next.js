@@ -7,7 +7,7 @@ import {
 
 type Segments = string[] | null;
 
-export default function ActiveUser() {
+export default function ActiveLink() {
   const segment = useSelectedLayoutSegment();
   const segments: Segments = useSelectedLayoutSegments();
   const pathname = usePathname();
@@ -32,7 +32,7 @@ export default function ActiveUser() {
 
   return (
     <div>
-      <h4>active user segment {segment && 'root /'}</h4>
+      <h4>segment {segment || '/'}</h4>
       <ul>
         {segments
           ? segments.map((segment, index) => <li key={index}>{segment}</li>)

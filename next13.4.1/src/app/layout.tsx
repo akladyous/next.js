@@ -16,9 +16,11 @@ type Props = {
 export default function RootLayout(props: Props) {
   return (
     <html lang='en'>
-      <body className={`${inter.className}  border-green-500 border-2 m-1`}>
+      <body className={`${inter.className} `}>
         <h4 className='px-2'>Root Layout</h4>
-        {props.children}
+        <main className='border-green-500 border-2 m-2 p-2 min-h-screen'>
+          {props.children}
+        </main>
       </body>
     </html>
   );
