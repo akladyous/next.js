@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import ActiveUser from './components/activeUser';
+import ActiveUser from './components/ActiveLink';
 
 type Props = {
   params: {};
@@ -31,7 +31,6 @@ export default function UserHome(props: Props) {
             user 2
           </Link>
         </div>
-        <ActiveUser />
       </section>
     </>
   );

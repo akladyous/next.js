@@ -1,5 +1,5 @@
 import { Metadata, ResolvingMetadata } from 'next';
-import ActiveUser from '../components/activeUser';
+import ActiveUser from '../components/ActiveLink';
 
 type Props = {
   params: { user_id: string };
