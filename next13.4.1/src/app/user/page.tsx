@@ -6,8 +6,8 @@ type Props = {
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export default function UserPage(props: Props) {
-  console.log('\x1b[36m%s%s\x1b[0m', 'UserPage props : '.padEnd(50), props);
+export default function UserHome(props: Props) {
+  console.log('\x1b[36m%s%s\x1b[0m', 'UserHome props : '.padEnd(50), props);
 
   return (
     <>

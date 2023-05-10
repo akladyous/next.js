@@ -1,28 +1,25 @@
+import { Metadata, ResolvingMetadata } from 'next';
+
 type Props = {
   params: { user_id: string };
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export async function generateMetadata(props: Props) {
+export async function generateMetadata(
+  props: Props,
+  parent?: ResolvingMetadata,
+): Promise<Metadata> {
   console.log(
     '\x1b[36m%s%s\x1b[0m',
-    'ActiveUserPage generateMetadata params : '.padEnd(50),
+    'User generateMetadata params : '.padEnd(50),
     props.params,
   );
-  console.log(
-    '\x1b[36m%s%s\x1b[0m',
-    'ActiveUserPage generateMetadata searchParams : '.padEnd(50),
-    props.searchParams,
-  );
+
   return { ...props, title: `user ${props.params.user_id}` };
 }
 
-export default function ActiveUserPage(props: Props) {
-  console.log(
-    '\x1b[36m%s%s\x1b[0m',
-    'ActiveUserPage: params'.padEnd(50),
-    props,
-  );
+export default function User(props: Props) {
+  console.log('\x1b[36m%s%s\x1b[0m', 'User: params'.padEnd(50), props);
 
   return (
     <>

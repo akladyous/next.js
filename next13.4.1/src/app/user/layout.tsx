@@ -5,19 +5,13 @@ type UserProps = {
   params: { user_id: string };
 };
 
-async function getProduct(id: string) {
-  const res = await fetch(`https://.../api/products/${id}`);
-  return res.json();
-}
-
 export async function generateMetadata(props: {}): Promise<Metadata> {
-  // const product = await getProduct(params.id);
   console.log(
     '\x1b[36m%s%s\x1b[0m',
-    'UserLayout generateMetadata props : '.padEnd(50),
+    'UserHomeLayout generateMetadata props : '.padEnd(50),
     props,
   );
-  return { title: 'user' };
+  return { title: 'Users Home Page', description: 'welcome to users page' };
 }
 
 export default function UserHomeLayout(props: UserProps) {
