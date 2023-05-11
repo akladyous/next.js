@@ -6,7 +6,7 @@ export async function generateMetadata(params: {}) {
   };
 }
 
-export default function TagsMain(props: {}) {
+export default function TagsHome(props: {}) {
   console.log('AboutPage props : ', props);
   return (
     <div id='userPage'>

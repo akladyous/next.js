@@ -6,7 +6,7 @@ export async function generateMetadata(params: {}) {
   };
 }
 
-export default function PostsMain(props: {}) {
+export default function PostsHome(props: {}) {
   console.log('AboutPage props : ', props);
   return (
     <div id='userPage'>

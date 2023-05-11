@@ -16,7 +16,10 @@ export async function generateMetadata(props: {}): Promise<Metadata> {
   return { title: 'Users Home Page', description: 'welcome to users page' };
 }
 
-export default function UserHome(props: Props) {
+export default async function UserHome(props: Props) {
+  const usersData: Promise<User[]> = await getUsers();
+  const users: User[] = await usersData;
+
   console.log('\x1b[36m%s%s\x1b[0m', 'UserHome props : '.padEnd(50), props);
 
   return (
@@ -26,20 +29,19 @@ export default function UserHome(props: Props) {
         className='border-2 border-blue-500 m-1 p-2 min-h-screen'
       >
         <h1>Users home page</h1>
-
         <div>
-          <Link
-            className='bg-slate-200 mr-2 p-1'
-            href={'/user/1'}
-          >
-            user 1
-          </Link>
-          <Link
-            className='bg-slate-200 mr-2 p-1'
-            href={'/user/2'}
-          >
-            user 2
-          </Link>
+          <ul>
+            {users.map((user) => {
+              return (
+                <li
+                  key={user.id}
+                  className='p-2 hover:text-gray-500'
+                >
+                  {user.name}
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </section>
     </>
