@@ -1,4 +1,5 @@
 'use client';
+import { useEffect } from 'react';
 import Link from 'next/link';
 import type { LinkProps } from 'next/link';
 import {
@@ -33,6 +34,11 @@ export default function NavLink(props: Props) {
   console.log('isActive'.padEnd(50), isActive);
   console.log('searchParams'.padEnd(50), searchParams);
   console.log('-'.repeat(50));
+
+  useEffect(() => {
+    console.log('searchParams : ', searchParams);
+    console.log('pathname     : ', pathname);
+  }, [searchParams, pathname]);
   return (
     <>
       <Link
