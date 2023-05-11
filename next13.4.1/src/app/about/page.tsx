@@ -26,11 +26,8 @@ export default function AboutPage(props: {}) {
   // throw new Error('custom error invoked');
   console.log('AboutPage props : ', props);
   return (
-    <section
-      id='userPage'
-      className='border-2 border-blue-500 m-1 p-2 min-h-screen'
-    >
+    <div id='userPage'>
       <h3>About Page</h3>
-    </section>
+    </div>
   );
 }
