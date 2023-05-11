@@ -6,14 +6,14 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 interface Props extends LinkProps {
   href: string;
   children?: React.ReactNode;
-  classes?: string | string[];
+  className?: string | string[];
 }
 const classNames = (...classes: string[]): string => {
   return classes.filter(Boolean).join(' ');
 };
 
 export default function NavLink(props: Props) {
-  const { href, children, classes } = props || {};
+  const { href, children, className } = props || {};
   const segment = useSelectedLayoutSegment();
   const isActive = href === segment;
   return (

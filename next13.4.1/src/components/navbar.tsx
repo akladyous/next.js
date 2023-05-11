@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import NavLink from '@/app/users/navlink';
+import NavLink from './NavLink';
 
 export default function NavBar() {
   return (

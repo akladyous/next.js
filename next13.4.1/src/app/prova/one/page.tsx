@@ -21,7 +21,7 @@ export default function One(props: Props) {
       id='userPage'
       className='border-2 border-blue-500 m-1 p-2 min-h-screen'
     >
-      <h3>Prova Page</h3>
+      <h3>One Page</h3>
       <ul>
         {segments.map((segment, index) => (
           <li key={index}>{segment}</li>
