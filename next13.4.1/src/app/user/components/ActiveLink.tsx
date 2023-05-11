@@ -18,7 +18,7 @@ export default function ActiveLink() {
 
   return (
     <div>
-      <p>active user segment {segment && 'root /'}</p>
+      <p>active segment {segment || '/'}</p>
       <ul>
         {segments
           ? segments.map((segment, index) => <li key={index}>{segment}</li>)
