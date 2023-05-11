@@ -14,19 +14,19 @@ export default function ActiveLink() {
 
   console.log(
     '\x1b[36m%s%s\x1b[0m',
-    'ActiveUser pathname : '.padEnd(50),
+    'ActiveLink pathname : '.padEnd(50),
     pathname,
   );
 
   console.log(
     '\x1b[36m%s%s\x1b[0m',
-    'ActiveUser segment : '.padEnd(50),
+    'ActiveLink segment : '.padEnd(50),
     segment,
   );
 
   console.log(
     '\x1b[36m%s%s\x1b[0m',
-    'ActiveUser segments : '.padEnd(50),
+    'ActiveLink segments : '.padEnd(50),
     segments,
   );
 

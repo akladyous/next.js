@@ -1,18 +1,7 @@
-import type { Metadata } from 'next';
-
 type UserProps = {
   children: React.ReactNode;
   params: { user_id: string };
 };
-
-export async function generateMetadata(props: {}): Promise<Metadata> {
-  console.log(
-    '\x1b[36m%s%s\x1b[0m',
-    'UserHomeLayout generateMetadata props : '.padEnd(50),
-    props,
-  );
-  return { title: 'Users Home Page', description: 'welcome to users page' };
-}
 
 export default function UserHomeLayout(props: UserProps) {
   console.log('\x1b[36m%s%s\x1b[0m', 'UserLayout props : '.padEnd(50), props);
