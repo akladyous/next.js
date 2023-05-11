@@ -14,7 +14,7 @@ interface NavLinkProps extends LinkProps {
   href: string;
   className?: string;
 }
-function classNames(...classes: string[]) {
+function classNames(...classes: string[]): string {
   return classes.filter(Boolean).join(' ');
 }
 
@@ -37,12 +37,12 @@ export default function NavLink({ href, children, className }: NavLinkProps) {
   return (
     <>
       <Link
+        href={href}
         // {...(className && { className })}
         className={classNames(
           active ? 'bg-gray-100 underline' : '',
-          'text-gray-900  hover:bg-blue-400 p-2 rouned-lg',
+          'text-gray-900 hover:bg-blue-400 p-2 rouned-lg',
         )}
-        href={href}
       >
         {children}
       </Link>

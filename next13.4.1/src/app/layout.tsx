@@ -1,4 +1,4 @@
-// 'use client';
+import ActiveLink from './user/components/ActiveLink';
 import './globals.css';
 import { Inter } from 'next/font/google';
 
@@ -15,6 +15,7 @@ export default function RootLayout(props: Props) {
       <body className={`${inter.className} `}>
         <h4 className='px-2'>Root Layout</h4>
         <main className='border-green-500 border-2 m-2 p-2 min-h-screen'>
+          <ActiveLink />
           {props.children}
         </main>
       </body>
