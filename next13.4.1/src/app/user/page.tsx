@@ -1,10 +1,19 @@
 import Link from 'next/link';
-import ActiveUser from './components/ActiveLink';
+import type { Metadata } from 'next';
 
 type Props = {
   params: {};
   searchParams: { [key: string]: string | string[] | undefined };
 };
+
+export async function generateMetadata(props: {}): Promise<Metadata> {
+  console.log(
+    '\x1b[36m%s%s\x1b[0m',
+    'UserHomeLayout generateMetadata props : '.padEnd(50),
+    props,
+  );
+  return { title: 'Users Home Page', description: 'welcome to users page' };
+}
 
 export default function UserHome(props: Props) {
   console.log('\x1b[36m%s%s\x1b[0m', 'UserHome props : '.padEnd(50), props);
