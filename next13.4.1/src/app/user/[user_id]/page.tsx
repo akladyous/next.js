@@ -1,5 +1,5 @@
 import { Metadata, ResolvingMetadata } from 'next';
-import ActiveUser from '../components/ActiveLink';
+import ActiveLink from '../components/ActiveLink';
 
 type Props = {
   params: { user_id: string };
@@ -27,8 +27,6 @@ export default function User(props: Props) {
       <section>
         <h4>User account</h4>
         <p>current user id {props.params.user_id}</p>
-
-        <ActiveUser />
       </section>
     </>
   );

@@ -7,7 +7,7 @@ import {
 
 type Segments = string[] | null;
 
-export default function ActiveUser() {
+export default function ActiveLink() {
   const segment = useSelectedLayoutSegment();
   const segments: Segments = useSelectedLayoutSegments();
   const pathname = usePathname();
