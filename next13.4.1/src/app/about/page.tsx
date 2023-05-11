@@ -26,8 +26,11 @@ export default function AboutPage(props: {}) {
   // throw new Error('custom error invoked');
   console.log('AboutPage props : ', props);
   return (
-    <main className=''>
-      <h3 className={`${roboto.className} mb-3 text-2xl `}>About Page</h3>
-    </main>
+    <section
+      id='userPage'
+      className='border-2 border-blue-500 m-1 p-2 min-h-screen'
+    >
+      <h3>About Page</h3>
+    </section>
   );
 }
