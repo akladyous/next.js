@@ -10,7 +10,19 @@ export default function NavBar() {
         >
           Home
         </NavLink>
-
+        <NavLink
+          className='hover:bg-slate-300 p-2 '
+          href='/posts'
+        >
+          Posts
+        </NavLink>
+        <NavLink
+          className='hover:bg-slate-300 p-2 '
+          href='/tags'
+        >
+          Tags
+        </NavLink>
+        {/* ----- */}
         <NavLink
           className='hover:bg-slate-300 p-2 '
           href='/about'
