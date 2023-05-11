@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { getUsers } from '@/lib/getUsers';
 
 type Props = {
   params: {};
