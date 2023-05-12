@@ -27,17 +27,17 @@ export default function NavLink(props: Props) {
 
   const isActive = href.slice(1) === segment;
 
-  console.log('href'.padEnd(50), href);
-  console.log('pathname'.padEnd(50), pathname);
-  console.log('segment'.padEnd(50), segment);
-  console.log('segments'.padEnd(50), segments);
-  console.log('isActive'.padEnd(50), isActive);
-  console.log('searchParams'.padEnd(50), searchParams);
-  console.log('-'.repeat(50));
+  // console.log('href'.padEnd(50), href);
+  // console.log('pathname'.padEnd(50), pathname);
+  // console.log('segment'.padEnd(50), segment);
+  // console.log('segments'.padEnd(50), segments);
+  // console.log('isActive'.padEnd(50), isActive);
+  // console.log('searchParams'.padEnd(50), searchParams);
+  // console.log('-'.repeat(50));
 
   useEffect(() => {
-    console.log('searchParams : ', searchParams);
-    console.log('pathname     : ', pathname);
+    // console.log('searchParams : ', searchParams);
+    // console.log('pathname     : ', pathname);
   }, [searchParams, pathname]);
   return (
     <>
