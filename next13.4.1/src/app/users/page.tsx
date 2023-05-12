@@ -25,18 +25,16 @@ export default async function UserHome(props: Props) {
     >
       <h1>Users home page</h1>
       <div>
-        <ul>
-          {users.map((user) => {
-            return (
-              <li
-                key={user.id}
-                className='px-2 my-1 border hover:text-gray-500'
-              >
-                {user.name}
-              </li>
-            );
-          })}
-        </ul>
+        {users.map((user) => {
+          return (
+            <div
+              key={user.id}
+              className='px-2 my-1 border hover:text-amber-900'
+            >
+              <Link href={`/users/${user.id}`}>{user.name}</Link>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

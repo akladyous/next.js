@@ -1,3 +1,4 @@
+import { getUsers } from '@/lib/getUsers';
 import { Metadata, ResolvingMetadata } from 'next';
 
 type Props = {
@@ -18,14 +19,21 @@ export async function generateMetadata(
   return { ...props, title: `user ${props.params.user_id}` };
 }
 
-export default function User(props: Props) {
+export default async function User(props: Props) {
   console.log('\x1b[36m%s%s\x1b[0m', 'User: params'.padEnd(50), props);
 
+  const userData: User = await getUsers(props.params.user_id);
   return (
     <>
       <section>
         <h4>User account</h4>
-        <p>current user id {props.params.user_id}</p>
+        <pre>
+          <code>
+            {userData
+              ? JSON.stringify(userData, null, 2).replace(/["{[,\}\]]/g, '')
+              : ''}
+          </code>
+        </pre>
       </section>
     </>
   );

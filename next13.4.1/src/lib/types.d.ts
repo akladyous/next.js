@@ -28,3 +28,12 @@ type Post = {
   title: string;
   body: string;
 };
+
+enum Resources {
+  POSTS,
+  COMMENTS,
+  ALBUMS,
+  PHOTOS,
+  TODOS,
+  USERS,
+}

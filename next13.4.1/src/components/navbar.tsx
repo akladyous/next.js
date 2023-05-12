@@ -39,7 +39,7 @@ export default function NavBar() {
 
         <NavLink
           className='hover:bg-slate-300 p-2 '
-          href='/user'
+          href='/users'
         >
           Users
         </NavLink>
