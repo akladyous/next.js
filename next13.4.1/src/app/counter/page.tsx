@@ -9,7 +9,7 @@ interface ClickHandler {
   (event: React.MouseEvent<HTMLElement>): void;
 }
 
-export default function ProvaPage(props: Props) {
+export default function CounterPage(props: Props) {
   // console.log('\x1b[36m%s%s\x1b[0m', 'ProvaPage: params'.padEnd(50), props);
 
   const [counter, setCounter] = useState(0);
