@@ -17,12 +17,14 @@ export default function CounterPage(props: Props) {
     setCounter((v) => v + 1);
   };
   const decrement: ClickHandler = (_event: React.MouseEvent<HTMLElement>) => {
-    if (counter === 1) {
-      throw new Error("Counter cann't be negative number");
-    }
     setCounter((v) => v - 1);
   };
 
+  if (counter < 0) {
+    const err = new Error("Counter cann't be negative number");
+    err.stack = undefined;
+    throw err;
+  }
   return (
     <section id='userPage'>
       <h3>Prova Page</h3>
