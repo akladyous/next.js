@@ -32,9 +32,9 @@ export default function NavBar() {
 
         <NavLink
           className='hover:bg-slate-300 p-2 '
-          href='/prova'
+          href='/counter'
         >
-          prova
+          counter
         </NavLink>
 
         <NavLink
