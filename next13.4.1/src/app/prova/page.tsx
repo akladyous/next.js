@@ -18,8 +18,6 @@ export default function ProvaPage(props: Props) {
   };
   const decrement: ClickHandler = (_event: React.MouseEvent<HTMLElement>) => {
     if (counter === 1) {
-      const err = new Error("Counter cann't be negative number");
-      err.stack = undefined;
       throw new Error("Counter cann't be negative number");
     }
     setCounter((v) => v - 1);
