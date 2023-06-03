@@ -1,9 +1,11 @@
-export const usersData = [
+export const usersData: User[] = [
   {
     id: 1,
     name: 'Leanne Graham',
     userName: 'Bret',
     email: 'Sincere@april.biz',
+    phone: '1-770-736-8031 x56442',
+    website: 'hildegard.org',
     address: {
       street: 'Kulas Light',
       suite: 'Apt. 556',
@@ -14,8 +16,6 @@ export const usersData = [
         lng: '81.1496',
       },
     },
-    phone: '1-770-736-8031 x56442',
-    website: 'hildegard.org',
     company: {
       name: 'Romaguera-Crona',
       catchPhrase: 'Multi-layered client-server neural-net',
@@ -27,6 +27,8 @@ export const usersData = [
     name: 'Ervin Howell',
     userName: 'Antonette',
     email: 'Shanna@melissa.tv',
+    phone: '010-692-6593 x09125',
+    website: 'anastasia.net',
     address: {
       street: 'Victor Plains',
       suite: 'Suite 879',
@@ -37,8 +39,6 @@ export const usersData = [
         lng: '-34.4618',
       },
     },
-    phone: '010-692-6593 x09125',
-    website: 'anastasia.net',
     company: {
       name: 'Deckow-Crist',
       catchPhrase: 'Proactive didactic contingency',
@@ -50,6 +50,8 @@ export const usersData = [
     name: 'Clementine Bauch',
     userName: 'Samantha',
     email: 'Nathan@yesenia.net',
+    phone: '1-463-123-4447',
+    website: 'ramiro.info',
     address: {
       street: 'Douglas Extension',
       suite: 'Suite 847',
@@ -60,8 +62,6 @@ export const usersData = [
         lng: '-47.0653',
       },
     },
-    phone: '1-463-123-4447',
-    website: 'ramiro.info',
     company: {
       name: 'Romaguera-Jacobson',
       catchPhrase: 'Face to face bifurcated interface',
@@ -73,6 +73,8 @@ export const usersData = [
     name: 'Patricia Lebsack',
     userName: 'Karianne',
     email: 'Julianne.OConner@kory.org',
+    phone: '493-170-9623 x156',
+    website: 'kale.biz',
     address: {
       street: 'Hoeger Mall',
       suite: 'Apt. 692',
@@ -83,8 +85,6 @@ export const usersData = [
         lng: '-164.2990',
       },
     },
-    phone: '493-170-9623 x156',
-    website: 'kale.biz',
     company: {
       name: 'Robel-Corkery',
       catchPhrase: 'Multi-tiered zero tolerance productivity',
@@ -96,6 +96,8 @@ export const usersData = [
     name: 'Chelsey Dietrich',
     userName: 'Kamren',
     email: 'Lucio_Hettinger@annie.ca',
+    phone: '(254)954-1289',
+    website: 'demarco.info',
     address: {
       street: 'Skiles Walks',
       suite: 'Suite 351',
@@ -106,8 +108,6 @@ export const usersData = [
         lng: '62.5342',
       },
     },
-    phone: '(254)954-1289',
-    website: 'demarco.info',
     company: {
       name: 'Keebler LLC',
       catchPhrase: 'User-centric fault-tolerant solution',
@@ -119,6 +119,8 @@ export const usersData = [
     name: 'Mrs. Dennis Schulist',
     userName: 'Leopoldo_Corkery',
     email: 'Karley_Dach@jasper.info',
+    phone: '1-477-935-8478 x6430',
+    website: 'ola.org',
     address: {
       street: 'Norberto Crossing',
       suite: 'Apt. 950',
@@ -129,8 +131,6 @@ export const usersData = [
         lng: '71.7478',
       },
     },
-    phone: '1-477-935-8478 x6430',
-    website: 'ola.org',
     company: {
       name: 'Considine-Lockman',
       catchPhrase: 'Synchronised bottom-line interface',
@@ -142,6 +142,8 @@ export const usersData = [
     name: 'Kurtis Weissnat',
     userName: 'Elwyn.Skiles',
     email: 'Telly.Hoeger@billy.biz',
+    phone: '210.067.6132',
+    website: 'elvis.io',
     address: {
       street: 'Rex Trail',
       suite: 'Suite 280',
@@ -152,8 +154,6 @@ export const usersData = [
         lng: '21.8984',
       },
     },
-    phone: '210.067.6132',
-    website: 'elvis.io',
     company: {
       name: 'Johns Group',
       catchPhrase: 'Configurable multimedia task-force',
@@ -165,6 +165,8 @@ export const usersData = [
     name: 'Nicholas Runolfsdottir V',
     userName: 'Maxime_Nienow',
     email: 'Sherwood@rosamond.me',
+    phone: '586.493.6943 x140',
+    website: 'jacynthe.com',
     address: {
       street: 'Ellsworth Summit',
       suite: 'Suite 729',
@@ -175,8 +177,6 @@ export const usersData = [
         lng: '-120.7677',
       },
     },
-    phone: '586.493.6943 x140',
-    website: 'jacynthe.com',
     company: {
       name: 'Abernathy Group',
       catchPhrase: 'Implemented secondary concept',
@@ -188,6 +188,8 @@ export const usersData = [
     name: 'Glenna Reichert',
     userName: 'Delphine',
     email: 'Chaim_McDermott@dana.io',
+    phone: '(775)976-6794 x41206',
+    website: 'conrad.com',
     address: {
       street: 'Dayna Park',
       suite: 'Suite 449',
@@ -198,8 +200,6 @@ export const usersData = [
         lng: '-168.8889',
       },
     },
-    phone: '(775)976-6794 x41206',
-    website: 'conrad.com',
     company: {
       name: 'Yost and Sons',
       catchPhrase: 'Switchable contextually-based project',
@@ -211,6 +211,8 @@ export const usersData = [
     name: 'Clementina DuBuque',
     userName: 'Moriah.Stanton',
     email: 'Rey.Padberg@karina.biz',
+    phone: '024-648-3804',
+    website: 'ambrose.net',
     address: {
       street: 'Kattie Turnpike',
       suite: 'Suite 198',
@@ -221,8 +223,6 @@ export const usersData = [
         lng: '57.2232',
       },
     },
-    phone: '024-648-3804',
-    website: 'ambrose.net',
     company: {
       name: 'Hoeger LLC',
       catchPhrase: 'Centralized empowering task-force',
