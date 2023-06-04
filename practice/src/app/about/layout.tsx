@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { Roboto } from 'next/font/google';
+
+const roboto = Roboto({ weight: '300', style: 'normal', subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'About Page',
@@ -15,7 +18,11 @@ export default function AboutLayout(props: LayoutProps) {
   console.log('-'.repeat(60));
 
   return (
-    <main className='border-sky-200 border min-h-screen m-5 p-5'>
+    <main
+      className={'border-sky-200 border min-h-screen m-5 p-5 '.concat(
+        roboto.className,
+      )}
+    >
       <div className='border p-2'>
         <Link
           href={'/'}
