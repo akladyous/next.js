@@ -1,7 +1,7 @@
-import Image from 'next/image';
-
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'></main>
+    <main className='border-2 min-h-screen m-3 p-3'>
+      <h3>home page</h3>
+    </main>
   );
 }
