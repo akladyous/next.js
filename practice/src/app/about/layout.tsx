@@ -11,11 +11,6 @@ export const metadata: Metadata = {
 
 export default function AboutLayout(props: LayoutProps) {
   const { children } = props;
-  // console.log('children props : ', props.children?.props);
-
-  console.log('-'.repeat(60));
-  console.log(props);
-  console.log('-'.repeat(60));
 
   return (
     <main
