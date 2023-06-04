@@ -6,5 +6,11 @@ type Props = {
 };
 
 export default function AboutLayout(props: Props) {
-  return <></>;
+  console.log('children props : ', props.children?.props);
+  // console.log(props);
+  return (
+    <main className='border-sky-200 border min-h-screen m-5 p-5'>
+      {props.children}
+    </main>
+  );
 }
