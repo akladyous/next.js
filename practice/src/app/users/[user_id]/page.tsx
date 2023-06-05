@@ -1,5 +1,8 @@
+import { getResources } from "@/lib/getResources";
 import { getUser } from "@/lib/getUser";
 import isNumber from "is-number";
+import { Roboto } from "next/font/google";
+const roboto = Roboto({ weight: "500", subsets: ["greek"] });
 
 console.log(isNumber);
 
@@ -19,8 +22,13 @@ export default async function UserPage({ params: { user_id } }: UserPageProps) {
 		);
 	}
 
-	const userData: Promise<User> = await getUser(user_id);
-	const user = await userData;
+	// const userData: Promise<User> = await getUser(user_id);
+	// const user = await userData;
+
+	const usersData: Promise<User | undefined> = getResources("users", user_id);
+	const postsPostsData: Promise<Post[] | undefined> = getResources("posts");
+
+	const [user, posts] = await Promise.all([usersData, postsPostsData]);
 
 	console.log("");
 	console.log("\x1b[36m%s%s\x1b[0m", "UserHome user_id : ".padEnd(50), user_id);
@@ -28,7 +36,7 @@ export default async function UserPage({ params: { user_id } }: UserPageProps) {
 	return (
 		<section>
 			<pre>
-				<code>{JSON.stringify(user, null, 2)}</code>
+				<code className={roboto.className.concat("text-blue-500")}>{JSON.stringify(user, null, 2)}</code>
 			</pre>
 		</section>
 	);

@@ -1,6 +1,5 @@
-export const getUser = async (user_id: string) => {
-	console.log("user_id : ", user_id);
-	const url: string = `https://jsonplaceholder.typicode.com/users/${user_id}`;
+export const getUser = async (userId: string): Promise<any> => {
+	const url: string = `https://jsonplaceholder.typicode.com/users/${userId}`;
 	const response = await fetch(url, {
 		next: { revalidate: 60 },
 	});
