@@ -1,11 +1,12 @@
 import { getResources } from "@/lib/getResources";
-import { getUser } from "@/lib/getUser";
 import isNumber from "is-number";
-import { Roboto } from "next/font/google";
 import { Suspense } from "react";
 import UserPosts from "./component/UserPosts";
 import { Metadata } from "next";
+import { Roboto } from "next/font/google";
+
 const roboto = Roboto({ weight: "500", subsets: ["greek"] });
+import { getUser } from "@/lib/getUser";
 
 console.log(isNumber);
 
@@ -65,4 +66,13 @@ export default async function UserPage({ params: { userId } }: UserPageProps) {
 			) : null}
 		</section>
 	);
+}
+
+export async function generateStaticParams() {
+	const usersData: Promise<User[] | undefined> = getResources("users");
+	const users = await usersData;
+
+	return users?.map((user: User) => ({
+		userId: user.id.toString(),
+	}));
 }

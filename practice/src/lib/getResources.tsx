@@ -3,7 +3,7 @@ export const getResources = async <T,>(resourceName: ResourceName, id?: string):
 	const url: string = id ? `${baseURL}/${id}` : baseURL;
 
 	try {
-		const response = await fetch(url, { next: { revalidate: 30 } });
+		const response = await fetch(url, { next: { revalidate: 60 } });
 		if (!response.ok) {
 			throw new Error(`Request failed with status ${response.status}`);
 		}
