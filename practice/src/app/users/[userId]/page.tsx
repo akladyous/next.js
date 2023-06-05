@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import UserPosts from "./component/UserPosts";
 import { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import { notFound } from "next/navigation";
 
 const roboto = Roboto({ weight: "500", subsets: ["greek"] });
 import { getUser } from "@/lib/getUser";
@@ -19,6 +20,12 @@ export async function generateMetadata({ params: { userId } }: UserPageProps): P
 	const userData: Promise<User | undefined> = getResources("users", userId);
 	const user: User | undefined = await userData;
 
+	if (!user) {
+		return {
+			title: "User not found",
+		};
+	}
+
 	return {
 		title: user?.name,
 		description: user?.email,
@@ -26,6 +33,7 @@ export async function generateMetadata({ params: { userId } }: UserPageProps): P
 }
 
 export default async function UserPage({ params: { userId } }: UserPageProps) {
+	/*
 	if (!isNumber(userId)) {
 		return (
 			<>
@@ -35,6 +43,7 @@ export default async function UserPage({ params: { userId } }: UserPageProps) {
 			</>
 		);
 	}
+	*/
 
 	// const userData: Promise<User> = await getUser(userId);
 	// const user = await userData;
@@ -49,8 +58,11 @@ export default async function UserPage({ params: { userId } }: UserPageProps) {
 	const user: User | undefined = await getResources("users", userId);
 	const userPosts: Promise<Post[]> = getResources("posts");
 
-	console.log("");
+	console.log("-".repeat(60));
 	console.log("\x1b[36m%s%s\x1b[0m", "UserHome userId : ".padEnd(50), userId);
+	console.log("-".repeat(60));
+
+	if (!user) return notFound();
 
 	return (
 		<section className="p-2">
