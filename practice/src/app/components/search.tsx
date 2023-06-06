@@ -9,10 +9,12 @@ export default function Search(params: {}) {
 		setQuery(e.target.value);
 	}
 
+	function handleSubmit() {}
+
 	return (
 		<main className="w-1/2 border rounded-lg p-2 m-2 min-h-screen mx-auto">
 			<h3 className="text-center">Wiki Search</h3>
-			<form>
+			<form onSubmit={handleSubmit}>
 				<div className="mb-2">
 					<label htmlFor="query" className="block text-sm font-medium leading-6 text-gray-900 capitalize">
 						Search
