@@ -6,6 +6,7 @@ type Props = {};
 let prova: boolean = false;
 
 export default async function Firebase(props: Props) {
+	/*
 	try {
 		if (!prova) {
 			const docRef = await addDoc(collection(db, "portfolio"), portfolio);
@@ -15,6 +16,7 @@ export default async function Firebase(props: Props) {
 	} catch (error) {
 		console.log(error);
 	}
+	*/
 
 	return (
 		<main className="border m-2 p-2 min-h-screen">
