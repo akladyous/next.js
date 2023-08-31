@@ -1,69 +1,34 @@
-# Next.JS 13
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Welcome to the Project Name repository!
+## Getting Started
 
-## Introduction
+First, run the development server:
 
-The Project Name is a [brief description of your project]. Next.js is a powerful
-and popular framework for building modern web applications. It is built on top
-of React and provides an opinionated structure and tooling to create fast,
-scalable, and SEO-friendly web experiences.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
-## Next.js 13 Framework
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Next.js 13 is the latest version of the Next.js framework and introduces several
-exciting features and improvements. Here are some key aspects and highlights of
-Next.js 13:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-### Hybrid Rendering
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-Next.js 13 introduces hybrid rendering, which allows you to choose between
-server-side rendering (SSR), static site generation (SSG), or client-side
-rendering (CSR) on a per-page basis. This flexibility enables you to optimize
-the performance and user experience based on the specific requirements of each
-page.
+## Learn More
 
-### Automatic Static Optimization
+To learn more about Next.js, take a look at the following resources:
 
-Next.js 13 leverages automatic static optimization to generate static HTML and
-CSS files for pages that do not require server-side data fetching. This improves
-the loading speed of your application and enables better caching and CDN
-integration.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### Incremental Static Regeneration (ISR)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-With Next.js 13, you can leverage incremental static regeneration to update
-static pages at build time and provide real-time data updates without the need
-for a full rebuild. This allows you to strike a balance between dynamic and
-static content and maintain fast, up-to-date web experiences.
+## Deploy on Vercel
 
-### Improved Image Component
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Next.js 13 includes an enhanced Image component that automatically optimizes and
-serves images in the most efficient format and size based on the device and
-network conditions. This helps improve performance and reduce bandwidth usage
-while maintaining image quality.
-
-### Improved Developer Experience
-
-Next.js 13 brings several enhancements to the developer experience. It includes
-improved error reporting, faster builds, improved TypeScript support, and
-enhanced compatibility with the latest versions of React and other related
-libraries.
-
-These are just a few highlights of Next.js 13 and its core features. Next.js
-provides a comprehensive and flexible environment for building high-performance
-web applications.
-
-Feel free to explore these concepts further and apply them in your Next.js 13
-projects.
-
-## Contributing
-
-Contributions are welcome! If you would like to contribute to this project,
-please follow the guidelines outlined in the `CONTRIBUTING.md` file.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more
-details.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
